@@ -1,0 +1,15 @@
+1) Предполагается, что "ClientGUI.java" может запустить несколько пользователей. Как запустить файл в IDEA несколько раз?
+2) При нажатии на кнопку "Login" выполняется:
+
+    private void connect() {
+        try {
+            Socket socket = new Socket(tfIPAddress.getText(), Integer.parseInt(tfPort.getText()));
+            socketThread = new SocketThread(this, "Client", socket);
+        } catch (IOException e) {
+            showException(Thread.currentThread(), e);
+        }
+    }
+
+    Логин пользователя - название потока. То есть, каждый логин должен быть уникальным?
+
+3) Vector нужно использовать, чтобы передавать логин и текст?
